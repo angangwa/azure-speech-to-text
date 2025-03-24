@@ -1,5 +1,13 @@
 # Speech to text on Azure
 
+## Features
+
+1. Real-time speech to text from microphone and wav file
+2. Fast Transcription
+3. OpenAI Whisper model
+
+![screenshot](./diagrams/screenshot.png)
+
 ## Quick Start (commands for git bash on Windows)
 
 ### 1. Create `.env` file locally
