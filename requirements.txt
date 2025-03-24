@@ -1,0 +1,5 @@
+azure-cognitiveservices-speech
+gradio
+openai
+python-dotenv
+soundfile
