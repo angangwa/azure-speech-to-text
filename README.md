@@ -39,7 +39,7 @@ Or skip directly to next part.
 
 ### 4. Run Demo
 
-`python gradio\app.py`
+`python gradio/app.py`
 
 ### 5. Play with the demo on Browser
 
