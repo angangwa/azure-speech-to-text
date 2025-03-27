@@ -3,3 +3,4 @@ gradio
 openai
 python-dotenv
 soundfile
+pydub
