@@ -43,7 +43,7 @@ def process_whisper_transcription(file_path: str) -> Tuple[str, str]:
             azure_endpoint=AZURE_OPENAI_ENDPOINT,
         )
 
-        logger.debug(f"Sending request to Azure OpenAI Whisper API")
+        logger.debug("Sending request to Azure OpenAI Whisper API")
         result = client.audio.transcriptions.create(
             file=open(file_path, "rb"), model=AZURE_OPENAI_DEPLOYMENT_ID
         )
