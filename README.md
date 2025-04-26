@@ -102,7 +102,7 @@ Each component of this repository can be used independently based on which Azure
 
 ### 3. Notebook
 
-Review [speech-to-text-apis.ipynb](./notebooks/speech-to-text-apis.ipynb).
+Review [azure-speech-to-text.ipynb](./notebooks/azure-speech-to-text.ipynb).
 
 Or skip directly to next part.
 
