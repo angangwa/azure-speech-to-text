@@ -18,7 +18,7 @@ Ideal for developers looking to implement speech-to-text functionality in their 
 3. OpenAI Whisper model via Azure OpenAI
 4. Speaker diarization (identifying different speakers in conversations)
 5. Azure OpenAI GPT-4o-transcribe model for high-accuracy transcription
-6. WebSocket-based real-time transcription with OpenAI Realtime API
+6. **NEW** WebSocket-based real-time transcription with OpenAI Realtime API
 7. Streaming transcription for both completed audio files and live audio
 
 ![screenshot](./diagrams/screenshot.png)
