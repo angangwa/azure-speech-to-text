@@ -23,16 +23,16 @@ from tabs.microphone_tab import create_microphone_tab
 from tabs.file_tab import create_file_tab
 from tabs.fast_transcription_tab import create_fast_transcription_tab
 from tabs.whisper_tab import create_whisper_tab
+from tabs.gpt4o_file_tab import create_gpt4o_file_tab
+from tabs.gpt4o_realtime_tab import create_gpt4o_realtime_tab
 
 logger = logging.getLogger(__name__)
 
 
 def toggle_debug_mode(enable_debug):
     """Toggle debug logging mode"""
-    set_logging_level(debug_mode=enable_debug)
-    current_level = get_current_logging_level()
-    logger.info(f"Logging level changed to: {current_level}")
-    return f"Current logging level: {current_level}"
+    level = set_logging_level(debug_mode=enable_debug)
+    return f"Current logging level: {logging.getLevelName(level)}"
 
 
 def create_app():
@@ -52,6 +52,8 @@ def create_app():
             create_file_tab()
             create_fast_transcription_tab()
             create_whisper_tab()
+            create_gpt4o_file_tab()
+            create_gpt4o_realtime_tab()
 
         # Debug section
         with gr.Accordion("Debug Information", open=False):

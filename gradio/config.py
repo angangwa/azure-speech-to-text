@@ -29,6 +29,14 @@ AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
 AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
 AZURE_OPENAI_DEPLOYMENT_ID = os.getenv("AZURE_OPENAI_DEPLOYMENT_ID", "whisper")
 
+# Azure OpenAI GPT-4o configuration
+AZURE_OPENAI_GPT4O_API_KEY = os.getenv("AZURE_OPENAI_GPT4O_API_KEY")
+AZURE_OPENAI_GPT4O_ENDPOINT = os.getenv("AZURE_OPENAI_GPT4O_ENDPOINT")
+AZURE_OPENAI_GPT4O_DEPLOYMENT_ID = os.getenv("AZURE_OPENAI_GPT4O_DEPLOYMENT_ID")
+
+# Direct OpenAI API configuration
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 
 # Create Azure Speech config
 def create_speech_config():
@@ -65,6 +73,8 @@ def verify_configs():
     configs = {
         "Speech Service": bool(SPEECH_KEY and SERVICE_REGION),
         "Azure OpenAI": bool(AZURE_OPENAI_API_KEY and AZURE_OPENAI_ENDPOINT),
+        "Azure OpenAI GPT-4o": bool(AZURE_OPENAI_GPT4O_API_KEY and AZURE_OPENAI_GPT4O_ENDPOINT and AZURE_OPENAI_GPT4O_DEPLOYMENT_ID),
+        "OpenAI API": bool(OPENAI_API_KEY)
     }
 
     for name, available in configs.items():
